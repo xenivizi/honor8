@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Honor 8</title>
+<link rel="shortcut icon" href="https://cdnskin.hihonor.com/us/skin/frontend/huawei/honor3/favicon.ico" type="image/x-icon">
+<style>
+	body{
+                background-position: center;
+                background-image: url("img/backgroundpic.jpg");
+                background-repeat: repeat;
+                background-attachment: fixed;
+            }
+
+</style>
+<link rel="stylesheet" href="css/layout.css" />
+<script type="text/javascript" src="js/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(
+			function() {
+				$("#menuBar li a").each(function() {
+					$(this).click(function(event) {
+						event.preventDefault();
+						//alert($(this).attr('href'));
+						$('#content').load($(this).attr('href'));
+					});
+				});
+				$('#content').load('leiras.html');
+
+				$.getJSON('news.json', function(data) {
+					$.each(data, function(key, val) {
+						$('#news').append(
+								'<div class="newsItem"><div class="newsItemHeader"><div class="newsImg"><img width="90px" src="'+val['img']+'"></div>'
+										+ val['title']
+										+ '</div><div class="newsItemContent">'
+										+ val['teaser'] + '</div></div>');
+					});
+				});
+			});
+</script>
+</head>
+<body>
+
+<div id="header">
+		<div id="bannerLogo"></div>
+		<div id="menuBar">
+			<ul>
+				<li><a href="leiras.html">Honor 8</a></li>
+				<li><a href="gal.html">Galéria</a></li>
+				<li><a href="spec.html">Specifikáció</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="siteBody">
+		<div id="news"></div>
+		<div id="content"></div>
+
+	</div>
+	<div id="footer">Készítette: Vizi Xénia</div>
+</body>
+</html>

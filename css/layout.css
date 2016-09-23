@@ -1,0 +1,105 @@
+@CHARSET "UTF-8";
+body { text-align: center; }
+
+#header {
+    width: 1000px;
+    height: auto;
+    margin: auto;
+    background: #2e96af;
+}
+
+#bannerLogo {
+    width: 1000px;
+    height: 60px;
+    margin: auto;
+    background: #333333;
+    background-image: url("../img/honor logo.jpg");
+    background-repeat: no-repeat;
+    
+    
+}
+
+#menuBar {
+    width: 1000px;
+    height: 50px;
+    margin: auto;
+    background: #696969;
+    padding : 10px 0px 30px 0px;
+}
+
+#menuBar ul li{
+	font-weight: bold;
+    display : inline-block;
+    width : 200px;
+    padding: 5px;
+    margin : 5px;
+    border : 2px solid #05bbc5;
+    background: #bbffff;
+    border-radius : 10px;
+    text-align : center;
+}
+
+#menuBar ul li:HOVER{
+    background: #dfffff;
+}
+
+#siteBody {
+    width: 1000px;
+    margin: auto;
+    background: #00ff40;
+}
+
+#content {
+	text-align: left;
+    width: 1000px;
+    min-height : 200px;
+    margin: auto;
+    background: linear-gradient(141deg, #0fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+    color: #80ffff;
+}
+
+.headerTitle{
+	font-size:24px;
+	padding:10px;
+	padding-bottom:30px;
+	font-weight:bold;
+	text-align:center;
+}
+.pad5 { 
+	padding: 20px;
+    padding-right: 115px; 
+	}
+
+#news {
+    margin: auto;
+    background: #c3c3c3;
+    float: right;
+}
+
+#news .newsItem {
+    widht : 80px;
+    padding : auto;
+    border : 2px dashed #b97957;
+    background : #ffddff;
+}
+
+#news .newsItemHeader {
+    text-transform : uppercase;
+    font-style : bold;
+}
+
+#news .newsItemContent {
+    font-size : 12px;
+    font-style : italic;
+    font-color : #696969;
+}
+
+#footer {
+	text-align: right;
+	color: #2e96af;
+    width: 1000px;
+    height: 20px;
+    margin: auto;
+    background: #333333;
+    clear : both;
+}
